@@ -65,9 +65,8 @@ function updateStatus(selectElement) {
     const listItem = selectElement.parentElement;
     listItem.className = selectedStatus;
     if(selectedStatus == "inprogress"){
-        if(listItem.className == "done"){
-            console.log(true);
-        }
+        started = started+1;
+        startCount.innerHTML = started;
     }
     else if(selectedStatus == "done"){
         completed = completed+1;
